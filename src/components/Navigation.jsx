@@ -28,31 +28,31 @@ function Navigation() {
 
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-2xl font-bold text-pink-600">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16">
+          <Link to="/" className="text-base sm:text-xl md:text-2xl font-bold text-pink-600 leading-tight">
             {config.boutiqueName}
           </Link>
-          <div className="flex space-x-4">
+          <div className="flex space-x-1 sm:space-x-3 md:space-x-4">
             <Link
               to="/categories"
-              className="text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-gray-700 hover:text-pink-600 px-1 sm:px-2 md:px-3 py-2 rounded-md text-xs sm:text-sm font-medium"
             >
               Catalogue
             </Link>
             <Link
               to="/contact"
-              className="text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium"
+              className="text-gray-700 hover:text-pink-600 px-1 sm:px-2 md:px-3 py-2 rounded-md text-xs sm:text-sm font-medium"
             >
               Contact
             </Link>
             <Link
               to="/cart"
-              className="text-gray-700 hover:text-pink-600 px-3 py-2 rounded-md text-sm font-medium relative"
+              className="text-gray-700 hover:text-pink-600 px-1 sm:px-2 md:px-3 py-2 rounded-md text-xs sm:text-sm font-medium relative"
             >
               Cart
               {cartCount > 0 && (
-                <span className="ml-1 text-pink-600 font-semibold">
+                <span className="ml-0.5 sm:ml-1 text-pink-600 font-semibold text-xs sm:text-sm">
                   ({cartCount})
                 </span>
               )}
