@@ -1,0 +1,386 @@
+Below is your **fully updated and finalized PRD (Product Requirements Document)** for **Phase 1 – Ship Fast & Free**, covering:
+
+✔ React + Vite
+✔ Host on Vercel
+✔ Designs stored in hardcoded JSON
+✔ WhatsApp-based actions for suggestions & appointments
+✔ Category-based catalogue
+✔ No backend
+✔ No server / database
+
+You can give this PRD directly to a team, an AI website builder, or use it as your blueprint while building.
+
+---
+
+# 🌟 **PRODUCT REQUIREMENTS DOCUMENT (PRD)**
+
+## **Boutique Website — Phase 1 (React + Vite + Vercel, No Backend)**
+
+---
+
+# **1. Product Overview**
+
+This website is for a small boutique business. Customers will scan a QR code and land on a mobile-friendly website where they can:
+
+* Browse categories of clothing (Designer Blouses, Dresses, Short Frocks, Long Frocks, Lehengas, Kids Wear, etc.)
+* View designs inside each category
+* View detailed information for each design
+* Add items to a local cart (no backend)
+* Suggest their own custom design via WhatsApp
+* Schedule a store visit via WhatsApp
+* Contact the boutique through WhatsApp or by phone
+
+**Admin (you) can update designs manually by editing a `designs.json` file and redeploying on Vercel.**
+
+---
+
+# **2. Goals & Non-Goals**
+
+### **2.1 Goals**
+
+* Create a simple, beautiful, responsive boutique website.
+* Host for free with zero backend costs.
+* Allow customers to:
+
+  * View catalogue categories
+  * Browse designs
+  * View details
+  * Send enquiries via WhatsApp
+  * Send custom design suggestions via WhatsApp
+  * Schedule boutique visits via WhatsApp
+* Keep development fast, simple, and lightweight.
+
+### **2.2 Non-Goals (For Phase 1)**
+
+* No admin dashboard
+* No real database
+* No image uploads from the website
+* No login/authentication
+* No payments or online ordering
+* No API backend (Spring Boot, Node, or Firebase)
+
+---
+
+# **3. Target Users**
+
+### **End Customers**
+
+* Boutique customers scanning the QR code
+* Mostly mobile users
+* Looking for designs quickly and easily
+
+### **Admin / Boutique Owner**
+
+* Will update designs manually by editing the JSON dataset
+
+---
+
+# **4. System Architecture (Phase 1)**
+
+### **Frontend**
+
+* **React + Vite**
+* **React Router** for pages
+* **Local state** for cart
+
+### **Backend**
+
+* **None**
+* All data in `designs.json`
+
+### **Hosting**
+
+* **Vercel Free Tier**
+
+### **Integration**
+
+* All actions tied to **WhatsApp deep links**
+
+---
+
+# **5. Functional Requirements**
+
+## **5.1 Pages & User Flows**
+
+---
+
+## **5.1.1 Home Page**
+
+**Features:**
+
+* Boutique logo + navigation
+* Hero image + tagline
+* Buttons:
+
+  * *Browse Catalogue*
+  * *Schedule Visit* (opens WhatsApp)
+* Category preview section (3–6 categories)
+* Floating WhatsApp button
+* Footer with store address and Instagram link
+
+**WhatsApp Action:**
+Tap *Schedule Visit* → prefilled WhatsApp message:
+
+> “Hi, I’d like to schedule a visit on [date] at [time]. My name is ______.”
+
+---
+
+## **5.1.2 Categories Page**
+
+**Features:**
+
+* Grid of category cards:
+
+  * Designer Blouses
+  * Dresses
+  * Short Frocks
+  * Long Frocks
+  * Lehengas
+  * Kids Wear
+  * Custom Orders
+* Each card contains:
+
+  * Cover image
+  * Category name
+
+**Data Source:**
+Hardcoded in JSON or JS array.
+
+---
+
+## **5.1.3 Category Detail Page**
+
+**Features:**
+
+* Title + description
+* Filters (optional): sort by price or newness
+* Display all designs under that category
+* Each card shows:
+
+  * Design image
+  * Name
+  * Starting price
+  * Tap → go to Design Detail page
+
+**Data Source:**
+Filtered from `designs.json`.
+
+---
+
+## **5.1.4 Design Detail Page**
+
+**Features:**
+
+* Image carousel
+* Design name
+* Category
+* Description
+* Fabrics & work details
+* Price range
+* Button: **Add to Cart**
+* Button: **Share on WhatsApp**
+* Button: **Suggest Your Design**
+
+**WhatsApp Actions:**
+
+* Share design:
+
+  > “I’m interested in this design: <design name>. Can you tell me more?”
+
+* Suggest custom design:
+
+  > “Hi, I want a custom design similar to: <design name>. Attaching image here.”
+
+User manually attaches the image in WhatsApp → No backend needed.
+
+---
+
+## **5.1.5 Cart Page**
+
+**Features:**
+
+* Local storage or state only
+* No server-side cart
+* List selected designs
+* Remove items option
+
+**WhatsApp Action:**
+Button → *Send Enquiry on WhatsApp*
+Message will contain:
+
+> “Hi, I am interested in the following items:
+>
+> 1. <Design 1>
+> 2. <Design 2>
+>    My name: ______
+>    Preferred visit time: ______”
+
+---
+
+## **5.1.6 Schedule Visit Page**
+
+(Optional — you may skip if using only WhatsApp)
+
+Contains fields:
+
+* Name
+* Phone
+* Date
+* Time
+
+Button: **Confirm via WhatsApp**
+
+Deep link sends:
+
+> "Hi, I would like to schedule a visit on <date> at <time>. My name is <user name>."
+
+---
+
+## **5.1.7 Contact Page**
+
+Contains:
+
+* Phone number
+* WhatsApp button
+* Address
+* Google Maps link
+* Instagram link
+* Opening hours
+
+---
+
+# **6. Non-Functional Requirements**
+
+### **6.1 Performance**
+
+* Load < 2s on 4G
+* Optimized images
+* Vercel CDN
+
+### **6.2 Mobile-first**
+
+* 90% users will be mobile
+* All grids must be responsive
+
+### **6.3 Accessibility**
+
+* High contrast text
+* Large tap targets
+* Alt text for all images
+
+### **6.4 SEO**
+
+* Category pages must have titles + meta description
+* Shareable URLs for designs
+* Sitemap optional
+
+---
+
+# **7. Data Structure**
+
+### **designs.json**
+
+```json
+{
+  "categories": [
+    {
+      "id": "designer-blouses",
+      "name": "Designer Blouses",
+      "image": "/images/categories/blouses.jpg"
+    },
+    {
+      "id": "dresses",
+      "name": "Dresses",
+      "image": "/images/categories/dresses.jpg"
+    }
+  ],
+
+  "designs": [
+    {
+      "id": "blouse-001",
+      "category": "designer-blouses",
+      "name": "Mirror Work Bridal Blouse",
+      "price": "1500",
+      "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear.",
+      "fabric": "Raw Silk",
+      "work": "Mirror Embroidery",
+      "images": [
+        "/images/designs/blouse001-a.jpg",
+        "/images/designs/blouse001-b.jpg"
+      ]
+    }
+  ]
+}
+```
+
+Admin (you) will update this file when adding new designs.
+
+---
+
+# **8. Technical Requirements**
+
+### **8.1 Tech Stack**
+
+* React (Vite)
+* React Router
+* TailwindCSS (optional)
+* JSON-based data
+* Vercel hosting
+* WhatsApp deep links
+
+### **8.2 Folder Structure**
+
+```
+src/
+  components/
+  pages/
+    Home.jsx
+    Categories.jsx
+    CategoryDetail.jsx
+    DesignDetail.jsx
+    Cart.jsx
+    Contact.jsx
+    Visit.jsx
+  data/
+    designs.json
+  assets/
+  App.jsx
+  main.jsx
+```
+
+---
+
+# **9. Integration Requirements**
+
+### **9.1 WhatsApp Deep Links**
+
+#### Format:
+
+```
+https://wa.me/<phone>?text=<encoded-text>
+```
+
+### **Actions:**
+
+* Suggest a design
+* Share a design
+* Schedule a visit
+* Send cart enquiry
+
+---
+
+# **10. Deployment Requirements**
+
+### **10.1 Vercel Setup**
+
+* Connect GitHub repository
+* Auto deploy on push
+* Use default build command:
+
+  ```
+  npm install
+  npm run build
+  ```
+* Output directory: `dist`
+
+

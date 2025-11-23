@@ -1,0 +1,283 @@
+{
+  "categories": [
+    {
+      "id": "designer-blouses",
+      "name": "Designer Blouses",
+      "image": "/images/categories/designerbloucesCover.jpg",
+      "description": "Exquisite handcrafted blouses with intricate embroidery and mirror work"
+    },
+    {
+      "id": "dresses",
+      "name": "Dresses",
+      "image": "/images/categories/dressCover.jpg",
+      "description": "Elegant dresses for every occasion"
+    },
+    {
+      "id": "short-frocks",
+      "name": "Short Frocks",
+      "image": "/images/categories/shortfrockCover.jpg",
+      "description": "Charming short frocks perfect for casual wear"
+    },
+    {
+      "id": "long-frocks",
+      "name": "Long Frocks",
+      "image": "/images/categories/longfrockCover.jpg",
+      "description": "Graceful long frocks with beautiful patterns"
+    },
+    {
+      "id": "lehengas",
+      "name": "Lehengas",
+      "image": "/images/categories/lehengas.jpg",
+      "description": "Stunning lehengas for weddings and special occasions"
+    },
+    {
+      "id": "kids-wear",
+      "name": "Kids Wear",
+      "image": "/images/categories/kids-wear.jpg",
+      "description": "Adorable outfits for little ones"
+    },
+    {
+      "id": "custom-orders",
+      "name": "Custom Orders",
+      "image": "/images/categories/custom.jpg",
+      "description": "Get your dream design customized just for you"
+    }
+  ],
+  "designs": [
+    {
+      "id": "blouse-001",
+      "category": "designer-blouses",
+      "name": "Mirror Work Bridal Blouse",
+      "price": "1500",
+      "priceRange": "₹1,500 - ₹2,500",
+      "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+      "fabric": "Raw Silk",
+      "work": "Mirror Embroidery, Zari Work",
+      "images": [
+        "/images/designs/design1.png"
+      ]
+    },
+    {
+      "id": "blouse-002",
+      "category": "designer-blouses",
+      "name": "Embroidered Party Blouse",
+      "price": "1200",
+      "priceRange": "₹1,200 - ₹2,000",
+      "description": "Elegant party blouse with floral embroidery. Perfect for festive occasions.",
+      "fabric": "Georgette",
+      "work": "Hand Embroidery, Sequins",
+      "images": [
+        "/images/designs/design2.png"
+      ]
+    },
+    {
+        "id": "blouse-003",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design3.png"
+        ]
+      },
+      {
+        "id": "blouse-004",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design4.png"
+        ]
+      },
+      {
+        "id": "blouse-005",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design5.png"
+        ]
+      },
+      {
+        "id": "blouse-006",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design6.png"
+        ]
+      },
+      {
+        "id": "blouse-007",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design7.png"
+        ]
+      },
+      {
+        "id": "blouse-008",
+        "category": "designer-blouses",
+        "name": "Mirror Work Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered mirror work blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Mirror Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design8.png"
+        ]
+      },
+    {
+      "id": "dress-001",
+      "category": "dresses",
+      "name": "Floral Print Maxi Dress",
+      "price": "2500",
+      "priceRange": "₹2,500 - ₹3,500",
+      "description": "Beautiful floral print maxi dress with flowing silhouette.",
+      "fabric": "Cotton",
+      "work": "Printed Design",
+      "images": [
+        "/images/designs/dress1.png"
+      ]
+    },
+    {
+      "id": "dress-002",
+      "category": "dresses",
+      "name": "Elegant Evening Dress",
+      "price": "3500",
+      "priceRange": "₹3,500 - ₹4,500",
+      "description": "Sophisticated evening dress with elegant draping.",
+      "fabric": "Silk",
+      "work": "Embellished",
+      "images": [
+        "/images/designs/dress2.png"
+      ]
+    },
+    {
+      "id": "dress-003",
+      "category": "dresses",
+      "name": "Elegant Evening Dress",
+      "price": "3500",
+      "priceRange": "₹3,500 - ₹4,500",
+      "description": "Sophisticated evening dress with elegant draping.",
+      "fabric": "Silk",
+      "work": "Embellished",
+      "images": [
+        "/images/designs/dress3.png"
+      ]
+    },
+    {
+      "id": "lehenga-001",
+      "category": "lehengas",
+      "name": "Bridal Lehenga Set",
+      "price": "15000",
+      "priceRange": "₹15,000 - ₹25,000",
+      "description": "Stunning bridal lehenga with heavy embroidery and mirror work.",
+      "fabric": "Silk, Net",
+      "work": "Heavy Zari Work, Mirror Work, Stone Work",
+      "images": [
+        "/images/designs/lehenga001-a.jpg",
+        "/images/designs/lehenga001-b.jpg"
+      ]
+    },
+    {
+      "id": "short-frock-001",
+      "category": "short-frocks",
+      "name": "Casual Summer Frock",
+      "price": "800",
+      "priceRange": "₹800 - ₹1,200",
+      "description": "Comfortable and stylish short frock perfect for summer.",
+      "fabric": "Cotton",
+      "work": "Printed",
+      "images": [
+        "/images/designs/frock1.png"
+      ]
+    },
+    {
+      "id": "short-frock-002",
+      "category": "short-frocks",
+      "name": "Casual Summer Frock",
+      "price": "800",
+      "priceRange": "₹800 - ₹1,200",
+      "description": "Comfortable and stylish short frock perfect for summer.",
+      "fabric": "Cotton",
+      "work": "Printed",
+      "images": [
+        "/images/designs/frock2.png"
+      ]
+    },
+    {
+      "id": "long-frock-001",
+      "category": "long-frocks",
+      "name": "Elegant Long Frock",
+      "price": "1800",
+      "priceRange": "₹1,800 - ₹2,500",
+      "description": "Graceful long frock with beautiful patterns and comfortable fit.",
+      "fabric": "Georgette",
+      "work": "Embroidery",
+      "images": [
+        "/images/designs/frockL1.png"
+      ]
+    },
+    {
+      "id": "long-frock-002",
+      "category": "long-frocks",
+      "name": "Elegant Long Frock",
+      "price": "1800",
+      "priceRange": "₹1,800 - ₹2,500",
+      "description": "Graceful long frock with beautiful patterns and comfortable fit.",
+      "fabric": "Georgette",
+      "work": "Embroidery",
+      "images": [
+        "/images/designs/frockL2.png"
+      ]
+    },    {
+      "id": "long-frock-003",
+      "category": "long-frocks",
+      "name": "Elegant Long Frock",
+      "price": "1800",
+      "priceRange": "₹1,800 - ₹2,500",
+      "description": "Graceful long frock with beautiful patterns and comfortable fit.",
+      "fabric": "Georgette",
+      "work": "Embroidery",
+      "images": [
+        "/images/designs/frockL3.png"
+      ]
+    },
+    {
+      "id": "kids-001",
+      "category": "kids-wear",
+      "name": "Princess Dress",
+      "price": "1000",
+      "priceRange": "₹1,000 - ₹1,500",
+      "description": "Adorable princess dress for special occasions.",
+      "fabric": "Cotton",
+      "work": "Embroidery, Lace",
+      "images": [
+        "/images/designs/kids001-a.jpg"
+      ]
+    }
+  ]
+}
+
