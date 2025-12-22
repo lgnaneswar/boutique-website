@@ -88,12 +88,12 @@ function DesignDetail() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Image Carousel */}
             <div>
-              <div className="aspect-square bg-gray-100 rounded-lg overflow-hidden mb-4">
+              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center min-h-[400px]">
                 {currentImage ? (
                   <img
                     src={currentImage}
                     alt={design.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto max-h-[80vh] object-contain"
                     onError={(e) => {
                       e.target.style.display = 'none'
                       e.target.nextSibling.style.display = 'flex'
@@ -101,7 +101,7 @@ function DesignDetail() {
                   />
                 ) : null}
                 <div
-                  className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-6xl"
+                  className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-6xl min-h-[400px]"
                   style={{ display: currentImage ? 'none' : 'flex' }}
                 >
                   👗
@@ -152,18 +152,20 @@ function DesignDetail() {
                   <p className="text-gray-700 mb-4">{design.description}</p>
                 )}
                 
-                <div className="space-y-2 mb-4">
-                  {design.fabric && (
-                    <p>
-                      <span className="font-semibold">Fabric:</span> {design.fabric}
-                    </p>
-                  )}
-                  {design.work && (
-                    <p>
-                      <span className="font-semibold">Work:</span> {design.work}
-                    </p>
-                  )}
-                </div>
+                {design.category !== "designer-blouses" && (
+                  <div className="space-y-2 mb-4">
+                    {design.fabric && (
+                      <p>
+                        <span className="font-semibold">Fabric:</span> {design.fabric}
+                      </p>
+                    )}
+                    {design.work && (
+                      <p>
+                        <span className="font-semibold">Work:</span> {design.work}
+                      </p>
+                    )}
+                  </div>
+                )}
               </div>
 
               {/* Action Buttons */}

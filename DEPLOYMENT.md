@@ -1,4 +1,4 @@
-# Deployment Guide
+git# Deployment Guide
 
 ## Step 1: Initialize Git Repository
 
@@ -33,6 +33,7 @@ git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
 
 # Rename branch to main (if needed)
 git branch -M main
+
 
 # Push to GitHub
 git push -u origin main
