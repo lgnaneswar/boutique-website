@@ -178,17 +178,12 @@ function DesignDetail() {
                 <WhatsAppButton
                   message={(() => {
                     const baseUrl = window.location.origin
-                    let msg = "Hi, I am interested in the following items:\n\n"
-                    cartItems.forEach((item, index) => {
-                      const productUrl = `${baseUrl}/design/${item.id}`
-                      msg += `${index + 1}. ${item.name}\n${productUrl}\n\n`
-                    })
-                    msg += "My name: ______\nPreferred visit time: ______"
-                    return msg
+                    const productUrl = `${baseUrl}/design/${design.id}`
+                    return `I'm interested in this design: ${design.name}.\n\nView it here: ${productUrl}\n\nCan you tell me more?`
                   })()}
                   className="w-full"
                 >
-                  Send Enquiry on WhatsApp
+                  Share on WhatsApp
                 </WhatsAppButton>
                 
                 <button
