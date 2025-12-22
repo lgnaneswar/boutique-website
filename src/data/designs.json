@@ -147,6 +147,117 @@
         "images": [
           "/images/designs/design8.png"
         ]
+      },     
+      {
+        "id": "blouse-009",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design9.2.png",
+          "/images/designs/design9.1.png"
+        ]
+      },
+      {
+        "id": "blouse-010",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design10.png",
+          "/images/designs/design10.2.png"
+        ]
+      },
+      {
+        "id": "blouse-011",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design11.png",
+          "/images/designs/design11.2.png"
+        ]
+      },
+      {
+        "id": "blouse-012",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design12.png",
+          "/images/designs/design12.2.png"
+        ]
+      },
+      {
+        "id": "blouse-013",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design13.2.png",
+          "/images/designs/design13.png"
+        ]
+      },
+      {
+        "id": "blouse-014",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design14.png",
+          "/images/designs/design14.2.png"
+        ]
+      },
+      {
+        "id": "blouse-015",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design15.png",
+          "/images/designs/design15.2.png"
+        ]
+      },
+      {
+        "id": "blouse-016",
+        "category": "designer-blouses",
+        "name": "Hand-embroidered Bridal Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Hand-embroidered bridal blouse. Ideal for bridal wear with intricate detailing.",
+        "fabric": "Raw Silk",
+        "work": "Hand Embroidery, Zari Work",
+        "images": [
+          "/images/designs/design16.png"
+        ]
       },
     {
       "id": "dress-001",
@@ -188,6 +299,19 @@
       ]
     },
     {
+      "id": "dress-004",
+      "category": "dresses",
+      "name": "Elegant Evening Dress",
+      "price": "3500",
+      "priceRange": "₹3,500 - ₹4,500",
+      "description": "Sophisticated evening dress with elegant draping.",
+      "fabric": "Silk",
+      "work": "Embellished",
+      "images": [
+        "/images/designs/dress4.png"
+      ]
+    },
+    {
       "id": "lehenga-001",
       "category": "lehengas",
       "name": "Bridal Lehenga Set",
@@ -225,6 +349,32 @@
       "work": "Printed",
       "images": [
         "/images/designs/frock2.png"
+      ]
+    },
+    {
+      "id": "short-frock-003",
+      "category": "short-frocks",
+      "name": "Casual Summer Frock",
+      "price": "800",
+      "priceRange": "₹800 - ₹1,200",
+      "description": "Comfortable and stylish short frock perfect for summer.",
+      "fabric": "Cotton",
+      "work": "Printed",
+      "images": [
+        "/images/designs/frock3.png"
+      ]
+    },
+    {
+      "id": "short-frock-004",
+      "category": "short-frocks",
+      "name": "Casual Summer Frock",
+      "price": "800",
+      "priceRange": "₹800 - ₹1,200",
+      "description": "Comfortable and stylish short frock perfect for summer.",
+      "fabric": "Cotton",
+      "work": "Printed",
+      "images": [
+        "/images/designs/frock4.png"
       ]
     },
     {

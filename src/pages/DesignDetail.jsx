@@ -40,8 +40,6 @@ function DesignDetail() {
       cart.push({
         id: design.id,
         name: design.name,
-        price: design.price,
-        priceRange: design.priceRange,
         image: design.images?.[0] || '',
         category: design.category
       })
@@ -55,14 +53,18 @@ function DesignDetail() {
   }
 
   const handleShareWhatsApp = () => {
-    const message = `I'm interested in this design: ${design.name}. Can you tell me more?`
+    const baseUrl = window.location.origin
+    const productUrl = `${baseUrl}/design/${design.id}`
+    const message = `I'm interested in this design: ${design.name}.\n\nView it here: ${productUrl}\n\nCan you tell me more?`
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${config.whatsappPhone}?text=${encodedMessage}`
     window.open(whatsappUrl, '_blank')
   }
 
   const handleSuggestDesign = () => {
-    const message = `Hi, I want a custom design similar to: ${design.name}. Attaching image here.`
+    const baseUrl = window.location.origin
+    const productUrl = `${baseUrl}/design/${design.id}`
+    const message = `Hi, I want a custom design similar to: ${design.name}.\n\nReference: ${productUrl}\n\nAttaching image here.`
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${config.whatsappPhone}?text=${encodedMessage}`
     window.open(whatsappUrl, '_blank')
@@ -146,10 +148,6 @@ function DesignDetail() {
               )}
               
               <div className="mb-6">
-                <p className="text-3xl font-bold text-pink-600 mb-4">
-                  {design.priceRange || `Starting from ₹${design.price}`}
-                </p>
-                
                 {design.description && (
                   <p className="text-gray-700 mb-4">{design.description}</p>
                 )}
@@ -178,10 +176,19 @@ function DesignDetail() {
                 </button>
                 
                 <WhatsAppButton
-                  message={`I'm interested in this design: ${design.name}. Can you tell me more?`}
+                  message={(() => {
+                    const baseUrl = window.location.origin
+                    let msg = "Hi, I am interested in the following items:\n\n"
+                    cartItems.forEach((item, index) => {
+                      const productUrl = `${baseUrl}/design/${item.id}`
+                      msg += `${index + 1}. ${item.name}\n${productUrl}\n\n`
+                    })
+                    msg += "My name: ______\nPreferred visit time: ______"
+                    return msg
+                  })()}
                   className="w-full"
                 >
-                  Share on WhatsApp
+                  Send Enquiry on WhatsApp
                 </WhatsAppButton>
                 
                 <button

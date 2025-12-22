@@ -33,11 +33,13 @@ function Cart() {
       return
     }
 
+    const baseUrl = window.location.origin
     let message = "Hi, I am interested in the following items:\n\n"
     cartItems.forEach((item, index) => {
-      message += `${index + 1}. ${item.name}${item.priceRange ? ` (${item.priceRange})` : ''}\n`
+      const productUrl = `${baseUrl}/design/${item.id}`
+      message += `${index + 1}. ${item.name}\n${productUrl}\n\n`
     })
-    message += "\nMy name: ______\nPreferred visit time: ______"
+    message += "My name: ______\nPreferred visit time: ______"
 
     const encodedMessage = encodeURIComponent(message)
     const whatsappUrl = `https://wa.me/${config.whatsappPhone}?text=${encodedMessage}`
@@ -96,9 +98,6 @@ function Cart() {
                       >
                         {item.name}
                       </Link>
-                      <p className="text-pink-600 font-bold">
-                        {item.priceRange || `Starting from ₹${item.price}`}
-                      </p>
                     </div>
                     <button
                       onClick={() => removeFromCart(item.id)}
@@ -115,16 +114,15 @@ function Cart() {
                   <span className="text-lg font-semibold">Total Items:</span>
                   <span className="text-lg font-bold">{cartItems.length}</span>
                 </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Prices may vary. Please contact us for exact pricing and availability.
-                </p>
                 <WhatsAppButton
                   message={(() => {
+                    const baseUrl = window.location.origin
                     let msg = "Hi, I am interested in the following items:\n\n"
                     cartItems.forEach((item, index) => {
-                      msg += `${index + 1}. ${item.name}${item.priceRange ? ` (${item.priceRange})` : ''}\n`
+                      const productUrl = `${baseUrl}/design/${item.id}`
+                      msg += `${index + 1}. ${item.name}\n${productUrl}\n\n`
                     })
-                    msg += "\nMy name: ______\nPreferred visit time: ______"
+                    msg += "My name: ______\nPreferred visit time: ______"
                     return msg
                   })()}
                   className="w-full"

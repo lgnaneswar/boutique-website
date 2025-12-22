@@ -82,9 +82,6 @@ function CategoryDetail() {
                     <h3 className="font-semibold text-lg mb-1 line-clamp-2">
                       {design.name}
                     </h3>
-                    <p className="text-pink-600 font-bold">
-                      {design.priceRange || `Starting from ₹${design.price}`}
-                    </p>
                   </div>
                 </Link>
               ))}
