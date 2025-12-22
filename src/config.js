@@ -3,13 +3,13 @@
 export const config = {
   // WhatsApp phone number (include country code, no + or spaces)
   // Example: "919876543210" for India
-  whatsappPhone: "919866156221", // UPDATE THIS WITH YOUR PHONE NUMBER
+  whatsappPhone: "918885505824", // UPDATE THIS WITH YOUR PHONE NUMBER
   
   // Boutique information
   boutiqueName: "Vanaja Ladies Tailor",
   address: "Plot no 15, Sri Durga Estates, Suchitra,Hyderabad-500067",
-  phone: "+91 9866156221",
-  instagram: "https://instagram.com/_.libertine", // UPDATE THIS WITH YOUR INSTAGRAM
+  phone: "+91 8885505824",
+  instagram: "https://instagram.com/vanaja9641", // UPDATE THIS WITH YOUR INSTAGRAM
   
   // Opening hours
   openingHours: {
