@@ -10,7 +10,7 @@ export function WhatsAppButton({ message, children, className = "" }) {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className={`bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors ${className}`}
+      className={`bg-olive-700 hover:bg-olive-800 text-white font-light tracking-wide py-2 px-6 transition-all duration-300 hover:scale-[1.02] ${className}`}
     >
       {children || 'WhatsApp'}
     </button>
@@ -19,10 +19,10 @@ export function WhatsAppButton({ message, children, className = "" }) {
 
 export function FloatingWhatsAppButton() {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 animate-fade-in">
       <WhatsAppButton
         message="Hi, I'd like to know more about your boutique."
-        className="rounded-full p-4 shadow-lg"
+        className="rounded-full p-4 shadow-lg hover:shadow-xl"
       >
         <svg
           className="w-6 h-6"
@@ -36,4 +36,3 @@ export function FloatingWhatsAppButton() {
     </div>
   )
 }
-

@@ -3,19 +3,19 @@
     {
       "id": "designer-blouses",
       "name": "Designer Blouses",
-      "image": "/images/categories/designerbloucesCover.jpg",
+      "image": "/images/designs/design15.png",
       "description": "Exquisite handcrafted blouses with intricate embroidery and mirror work"
     },
     {
       "id": "dresses",
       "name": "Dresses",
-      "image": "/images/categories/dressCover.jpg",
+      "image": "/images/designs/dress4.png",
       "description": "Elegant dresses for every occasion"
     },
     {
       "id": "short-frocks",
       "name": "Short Frocks",
-      "image": "/images/categories/shortfrockCover.jpg",
+      "image": "/images/designs/frock4.png",
       "description": "Charming short frocks perfect for casual wear"
     },
     {
@@ -27,13 +27,13 @@
     {
       "id": "lehengas",
       "name": "Lehengas",
-      "image": "/images/categories/lehengas.jpg",
+      "image": "/images/designs/lehenga004.jpg",
       "description": "Stunning lehengas for weddings and special occasions"
     },
     {
       "id": "kids-wear",
       "name": "Kids Wear",
-      "image": "/images/categories/kids-wear.jpg",
+      "image": "/images/designs/kids001.png",
       "description": "Adorable outfits for little ones"
     },
     {
@@ -259,6 +259,19 @@
           "/images/designs/design16.png"
         ]
       },
+      {
+        "id": "blouse-017",
+        "category": "designer-blouses",
+        "name": "Navy Blue Peacock Embroidered Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Rich navy blue blouse with square neckline and purple lining, featuring intricate embroidery of teal-blue peacocks with fanned tails, pink flowers, and green foliage on both front and back, with prominent peacock motif on the back and floral patterns on short sleeves.",
+        "fabric": "Raw Silk",
+        "work": "Peacock and Floral Embroidery",
+        "images": [
+          "/images/designs/design17.png"
+        ]
+      },
     {
       "id": "dress-001",
       "category": "dresses",
@@ -309,20 +322,6 @@
       "work": "Pleated Draping, Fabric Flower Appliqué with Pearl",
       "images": [
         "/images/designs/dress4.png"
-      ]
-    },
-    {
-      "id": "lehenga-001",
-      "category": "lehengas",
-      "name": "Bridal Lehenga Set",
-      "price": "15000",
-      "priceRange": "₹15,000 - ₹25,000",
-      "description": "Stunning bridal lehenga with heavy embroidery and mirror work.",
-      "fabric": "Silk, Net",
-      "work": "Heavy Zari Work, Mirror Work, Stone Work",
-      "images": [
-        "/images/designs/lehenga001-a.jpg",
-        "/images/designs/lehenga001-b.jpg"
       ]
     },
     {
@@ -442,16 +441,69 @@
       ]
     },
     {
+      "id": "lehenga-002",
+      "category": "lehengas",
+      "name": "Yellow Parrot Print Lehenga",
+      "price": "15000",
+      "priceRange": "₹15,000 - ₹25,000",
+      "description": "Bright yellow lehenga choli set featuring repeating green parrot and leafy branch patterns throughout, fitted crop top with wide neckline and sheer puffed sleeves with tie details, voluminous A-line skirt with black and golden embroidered border at hemline.",
+      "fabric": "Organza/Georgette",
+      "work": "Printed Parrot Pattern, Golden Embroidery",
+      "images": [
+        "/images/designs/lehenga1.1.jpg",
+        "/images/designs/lehenga1.2.jpg"
+      ]
+    },
+    {
+      "id": "lehenga-003",
+      "category": "lehengas",
+      "name": "Aqua Blue Lehenga Set",
+      "price": "15000",
+      "priceRange": "₹15,000 - ₹25,000",
+      "description": "Light aqua blue lehenga choli set with matching blouse featuring hand-painted green leaf and floral motifs, voluminous A-line skirt with scattered green leaf patterns, paired with deep emerald green dupatta adorned with golden motifs and elaborate golden embroidered border.",
+      "fabric": "Organza/Georgette",
+      "work": "Hand-painted Floral Motifs, Golden Embroidery",
+      "images": [
+        "/images/designs/lehenga003.jpg"
+      ]
+    },
+    {
+      "id": "lehenga-004",
+      "category": "lehengas",
+      "name": "Fuchsia Pink and Golden Lehenga",
+      "price": "15000",
+      "priceRange": "₹15,000 - ₹25,000",
+      "description": "Vibrant fuchsia pink blouse with sweetheart neckline and pleated shoulder straps paired with rich golden yellow voluminous lehenga featuring subtle geometric patterns, fuchsia pink border with elaborate golden and pink brocade work, and matching fuchsia pink dupatta with zigzag golden border.",
+      "fabric": "Silk",
+      "work": "Brocade Work, Golden Embroidery",
+      "images": [
+        "/images/designs/lehenga004.jpg"
+      ]
+    },
+    {
+      "id": "lehenga-005",
+      "category": "lehengas",
+      "name": "Purple Golden Embroidered Lehenga",
+      "price": "15000",
+      "priceRange": "₹15,000 - ₹25,000",
+      "description": "Deep purple or indigo lehenga choli set richly embellished with intricate golden floral and paisley patterns throughout, fitted V-neck blouse with three-quarter sleeves featuring ornate golden cuffs, voluminous skirt with wide elaborate golden embroidered border at hemline and decorative cream tassels at waist.",
+      "fabric": "Silk",
+      "work": "Golden Zari Work, Sequins, Embroidery",
+      "images": [
+        "/images/designs/lehenga005.jpg"
+      ]
+    },
+    {
       "id": "kids-001",
       "category": "kids-wear",
-      "name": "Princess Dress",
+      "name": "Deep Plum Tiered Dress",
       "price": "1000",
       "priceRange": "₹1,000 - ₹1,500",
-      "description": "Adorable princess dress for special occasions.",
+      "description": "Deep plum or mulberry colored tiered dress with round neckline, short puffed sleeves with elasticated cuffs, empire waistline, and three-tiered gathered skirt creating a full flowing silhouette with crinkled texture fabric, perfect for casual wear.",
       "fabric": "Cotton",
-      "work": "Embroidery, Lace",
+      "work": "Tiered Design",
       "images": [
-        "/images/designs/kids001-a.jpg"
+        "/images/designs/kids001.png"
       ]
     }
   ]

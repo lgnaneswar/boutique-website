@@ -13,13 +13,13 @@ function CategoryDetail() {
 
   if (!category) {
     return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-white">
         <Navigation />
-        <main className="flex-grow flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Category not found</h1>
-            <Link to="/categories" className="text-pink-600 hover:underline">
-              Back to Categories
+        <main className="flex-grow flex items-center justify-center pt-24">
+          <div className="text-center animate-fade-in">
+            <h1 className="text-2xl font-light mb-4 text-black">Category not found</h1>
+            <Link to="/categories" className="text-olive-700 hover:text-olive-800 font-light transition-colors duration-300">
+              ← Back to Categories
             </Link>
           </div>
         </main>
@@ -29,42 +29,49 @@ function CategoryDetail() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       
-      <main className="flex-grow py-8 px-4">
+      <main className="flex-grow pt-24 md:pt-32 pb-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-8">
+          <div className="mb-12 animate-fade-in-up">
             <Link
               to="/categories"
-              className="text-pink-600 hover:text-pink-700 mb-4 inline-block"
+              className="inline-flex items-center text-black/60 hover:text-olive-700 mb-6 font-light transition-colors duration-300 group"
             >
-              ← Back to Categories
+              <span className="mr-2 group-hover:-translate-x-1 transition-transform duration-300">←</span>
+              Back to Categories
             </Link>
-            <h1 className="text-3xl md:text-4xl font-bold mb-2">{category.name}</h1>
+            <h1 className="text-4xl md:text-5xl font-light tracking-tight text-black mb-4">
+              {category.name}
+            </h1>
+            <div className="w-24 h-px bg-olive-700 mb-4"></div>
             {category.description && (
-              <p className="text-gray-600">{category.description}</p>
+              <p className="text-black/60 font-light max-w-2xl leading-relaxed">
+                {category.description}
+              </p>
             )}
           </div>
 
           {designs.length === 0 ? (
-            <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No designs available in this category yet.</p>
+            <div className="text-center py-20 animate-fade-in">
+              <p className="text-black/50 text-lg font-light">No designs available in this category yet.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {designs.map((design) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+              {designs.map((design, index) => (
                 <Link
                   key={design.id}
                   to={`/design/${design.id}`}
-                  className="group bg-white rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden"
+                  className="group relative overflow-hidden bg-white border border-black/10 hover:border-olive-700 transition-all duration-500 animate-fade-in-up"
+                  style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="aspect-square bg-gray-100 overflow-hidden">
+                  <div className="aspect-square bg-gray-50 overflow-hidden">
                     {design.images && design.images[0] ? (
                       <img
                         src={design.images[0]}
                         alt={design.name}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                         onError={(e) => {
                           e.target.style.display = 'none'
                           e.target.nextSibling.style.display = 'flex'
@@ -72,16 +79,19 @@ function CategoryDetail() {
                       />
                     ) : null}
                     <div
-                      className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-4xl"
+                      className="w-full h-full bg-gray-100 flex items-center justify-center text-4xl"
                       style={{ display: design.images && design.images[0] ? 'none' : 'flex' }}
                     >
                       👗
                     </div>
                   </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-1 line-clamp-2">
+                  <div className="p-4 md:p-5 bg-white">
+                    <h3 className="font-light text-base text-black group-hover:text-olive-700 transition-colors duration-300 line-clamp-2">
                       {design.name}
                     </h3>
+                  </div>
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-1.5 h-1.5 bg-olive-700 rounded-full"></div>
                   </div>
                 </Link>
               ))}
@@ -97,4 +107,3 @@ function CategoryDetail() {
 }
 
 export default CategoryDetail
-

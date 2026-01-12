@@ -30,19 +30,22 @@ function Visit() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       
-      <main className="flex-grow py-8 px-4">
+      <main className="flex-grow pt-24 md:pt-32 pb-16 px-4 md:px-8">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
-            Schedule a Visit
-          </h1>
+          <div className="mb-12 animate-fade-in-up">
+            <h1 className="text-4xl md:text-5xl font-light tracking-tight text-black mb-4 text-center">
+              Schedule a Visit
+            </h1>
+            <div className="w-24 h-px bg-olive-700 mx-auto"></div>
+          </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div className="bg-white border border-black/10 p-6 md:p-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-light text-black/60 mb-2">
                   Your Name *
                 </label>
                 <input
@@ -51,13 +54,13 @@ function Visit() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black/10 focus:border-olive-700 focus:outline-none transition-colors duration-300 bg-white font-light"
                   placeholder="Enter your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-light text-black/60 mb-2">
                   Phone Number
                 </label>
                 <input
@@ -66,13 +69,13 @@ function Visit() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black/10 focus:border-olive-700 focus:outline-none transition-colors duration-300 bg-white font-light"
                   placeholder="Enter your phone number"
                 />
               </div>
 
               <div>
-                <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="date" className="block text-sm font-light text-black/60 mb-2">
                   Preferred Date
                 </label>
                 <input
@@ -81,12 +84,12 @@ function Visit() {
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black/10 focus:border-olive-700 focus:outline-none transition-colors duration-300 bg-white font-light"
                 />
               </div>
 
               <div>
-                <label htmlFor="time" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="time" className="block text-sm font-light text-black/60 mb-2">
                   Preferred Time
                 </label>
                 <input
@@ -95,19 +98,19 @@ function Visit() {
                   name="time"
                   value={formData.time}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-black/10 focus:border-olive-700 focus:outline-none transition-colors duration-300 bg-white font-light"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                className="w-full bg-black text-white font-light tracking-wide py-3 px-6 hover:bg-olive-700 transition-all duration-300 hover:scale-[1.02]"
               >
                 Confirm via WhatsApp
               </button>
             </form>
 
-            <p className="mt-4 text-sm text-gray-600 text-center">
+            <p className="mt-6 text-sm text-black/50 text-center font-light">
               * Clicking the button will open WhatsApp with a pre-filled message. You can edit it before sending.
             </p>
           </div>
@@ -121,4 +124,3 @@ function Visit() {
 }
 
 export default Visit
-

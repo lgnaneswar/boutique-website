@@ -17,13 +17,13 @@ function DesignDetail() {
 
   if (!design) {
     return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-white">
         <Navigation />
-        <main className="flex-grow flex items-center justify-center">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold mb-4">Design not found</h1>
-            <Link to="/categories" className="text-pink-600 hover:underline">
-              Back to Categories
+        <main className="flex-grow flex items-center justify-center pt-24">
+          <div className="text-center animate-fade-in">
+            <h1 className="text-2xl font-light mb-4 text-black">Design not found</h1>
+            <Link to="/categories" className="text-olive-700 hover:text-olive-800 font-light transition-colors duration-300">
+              ← Back to Categories
             </Link>
           </div>
         </main>
@@ -44,7 +44,6 @@ function DesignDetail() {
         category: design.category
       })
       localStorage.setItem('cart', JSON.stringify(cart))
-      // Dispatch custom event to update cart count in Navigation
       window.dispatchEvent(new Event('cartUpdated'))
       alert('Added to cart!')
     } else {
@@ -73,22 +72,23 @@ function DesignDetail() {
   const currentImage = design.images?.[currentImageIndex] || null
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       
-      <main className="flex-grow py-8 px-4">
+      <main className="flex-grow pt-24 md:pt-32 pb-16 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <Link
             to={category ? `/category/${category.id}` : '/categories'}
-            className="text-pink-600 hover:text-pink-700 mb-4 inline-block"
+            className="inline-flex items-center text-black/60 hover:text-olive-700 mb-8 font-light transition-colors duration-300 group animate-fade-in"
           >
-            ← Back to {category?.name || 'Categories'}
+            <span className="mr-2 group-hover:-translate-x-1 transition-transform duration-300">←</span>
+            Back to {category?.name || 'Categories'}
           </Link>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Image Carousel */}
-            <div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden mb-4 flex items-center justify-center min-h-[400px]">
+            <div className="animate-fade-in-up">
+              <div className="bg-gray-50 rounded-sm overflow-hidden mb-4 flex items-center justify-center min-h-[400px] border border-black/5">
                 {currentImage ? (
                   <img
                     src={currentImage}
@@ -101,7 +101,7 @@ function DesignDetail() {
                   />
                 ) : null}
                 <div
-                  className="w-full h-full bg-gradient-to-br from-pink-200 to-purple-200 flex items-center justify-center text-6xl min-h-[400px]"
+                  className="w-full h-full bg-gray-100 flex items-center justify-center text-6xl min-h-[400px]"
                   style={{ display: currentImage ? 'none' : 'flex' }}
                 >
                   👗
@@ -115,10 +115,10 @@ function DesignDetail() {
                     <button
                       key={index}
                       onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-20 rounded overflow-hidden border-2 ${
+                      className={`flex-shrink-0 w-20 h-20 rounded-sm overflow-hidden border-2 transition-all duration-300 ${
                         index === currentImageIndex
-                          ? 'border-pink-600'
-                          : 'border-gray-300'
+                          ? 'border-olive-700'
+                          : 'border-black/10 hover:border-olive-500'
                       }`}
                     >
                       <img
@@ -136,33 +136,41 @@ function DesignDetail() {
             </div>
 
             {/* Design Details */}
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold mb-2">{design.name}</h1>
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {category && (
                 <Link
                   to={`/category/${category.id}`}
-                  className="text-pink-600 hover:text-pink-700 mb-4 inline-block"
+                  className="inline-block text-sm text-olive-700 hover:text-olive-800 mb-4 font-light transition-colors duration-300"
                 >
                   {category.name}
                 </Link>
               )}
+              <h1 className="text-3xl md:text-4xl font-light tracking-tight text-black mb-6">
+                {design.name}
+              </h1>
               
-              <div className="mb-6">
+              <div className="w-16 h-px bg-olive-700 mb-6"></div>
+              
+              <div className="mb-8">
                 {design.description && (
-                  <p className="text-gray-700 mb-4">{design.description}</p>
+                  <p className="text-black/70 mb-6 font-light leading-relaxed">
+                    {design.description}
+                  </p>
                 )}
                 
                 {design.category !== "designer-blouses" && (
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-3 mb-6">
                     {design.fabric && (
-                      <p>
-                        <span className="font-semibold">Fabric:</span> {design.fabric}
-                      </p>
+                      <div className="flex items-start">
+                        <span className="text-black/40 font-light text-sm w-20 flex-shrink-0">Fabric:</span>
+                        <span className="text-black/70 font-light">{design.fabric}</span>
+                      </div>
                     )}
                     {design.work && (
-                      <p>
-                        <span className="font-semibold">Work:</span> {design.work}
-                      </p>
+                      <div className="flex items-start">
+                        <span className="text-black/40 font-light text-sm w-20 flex-shrink-0">Work:</span>
+                        <span className="text-black/70 font-light">{design.work}</span>
+                      </div>
                     )}
                   </div>
                 )}
@@ -172,7 +180,7 @@ function DesignDetail() {
               <div className="space-y-3">
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-pink-600 hover:bg-pink-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full bg-black text-white font-light tracking-wide py-3 px-6 hover:bg-olive-700 transition-all duration-300 hover:scale-[1.02]"
                 >
                   Add to Cart
                 </button>
@@ -190,7 +198,7 @@ function DesignDetail() {
                 
                 <button
                   onClick={handleSuggestDesign}
-                  className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="w-full border border-black text-black font-light tracking-wide py-3 px-6 hover:bg-black hover:text-white transition-all duration-300"
                 >
                   Suggest Your Design
                 </button>
@@ -207,4 +215,3 @@ function DesignDetail() {
 }
 
 export default DesignDetail
-
