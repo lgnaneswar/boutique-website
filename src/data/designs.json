@@ -272,6 +272,32 @@
           "/images/designs/design17.png"
         ]
       },
+      {
+        "id": "blouse-018",
+        "category": "designer-blouses",
+        "name": "Deep Red Gold Embroidered Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Rich deep red or maroon blouse with square neckline and gold piping trim, featuring gold woven motifs and floral paisley patterns throughout, puffed short sleeves with ornate gold brocade cuffs, and deep U-shaped back cutout with gold tie closure and decorative red tassels.",
+        "fabric": "Raw Silk",
+        "work": "Gold Zari Work, Brocade Cuffs",
+        "images": [
+          "/images/designs/design18.png"
+        ]
+      },
+      {
+        "id": "blouse-019",
+        "category": "designer-blouses",
+        "name": "Grey Lace Blouse",
+        "price": "1500",
+        "priceRange": "₹1,500 - ₹2,500",
+        "description": "Light to medium grey lace blouse with intricate floral lace pattern covering entire garment, wide boat neck or scoop neckline, short cap-style sleeves, fitted tailored silhouette with shaping seams, cropped hemline, and full-length back zipper closure.",
+        "fabric": "Lace",
+        "work": "Intricate Lace Floral Pattern",
+        "images": [
+          "/images/designs/design19.png"
+        ]
+      },
     {
       "id": "dress-001",
       "category": "dresses",
@@ -441,6 +467,21 @@
       ]
     },
     {
+      "id": "long-frock-007",
+      "category": "long-frocks",
+      "name": "Rose Gold Brocade Anarkali",
+      "price": "1800",
+      "priceRange": "₹1,800 - ₹2,500",
+      "description": "Elegant rose-pink long frock featuring a metallic gold brocade bodice with a deep scoop neckline and full sleeves. The back showcases a sophisticated circular cutout with adjustable tie-up dori and decorative tassels, flowing into a voluminous, floor-length flared georgette skirt.",      
+      "fabric": "Brocade & Georgette Fabric",
+      "work": "Zari Weaving, Dori Tie-up, Tassels",
+      "images": [
+        "/images/designs/frockL7.1.png",
+        "/images/designs/frockL7.2.png"
+      ]
+    },
+
+    {
       "id": "lehenga-002",
       "category": "lehengas",
       "name": "Yellow Parrot Print Lehenga",
@@ -504,6 +545,45 @@
       "work": "Tiered Design",
       "images": [
         "/images/designs/kids001.png"
+      ]
+    },
+    {
+      "id": "kids-002",
+      "category": "kids-wear",
+      "name": "Royal Purple & Pink Pattu Pavadai Set",
+      "price": "1800",
+      "priceRange": "₹1,800 - ₹2,500",
+      "description": "Exquisite traditional South Indian kids' ethnic set featuring a vibrant purple brocade peplum-style blouse with puffed sleeves, a sweetheart neckline, and gold zari embroidery. Paired with a contrasting pink pleated silk skirt (Lehenga) adorned with floral motifs and a thick ornate purple border.",
+      "fabric": "Silk",
+      "work": "Zari Weaving, Peplum Pleats, Brocade",
+      "images": [
+        "/images/designs/kids002.png"
+      ]
+    },
+    {
+      "id": "kids-003",
+      "category": "kids-wear",
+      "name": "Sapphire Blue & Magenta Silk Pavadai",
+      "price": "1200",
+      "priceRange": "₹1,200 - ₹1,800",
+      "description": "Stunning kids' traditional ensemble featuring a sapphire blue silk blouse with a unique Peter Pan style scalloped collar and puffed sleeves. The blouse is designed in a peplum silhouette with crisp knife pleats at the waist. Paired with a magenta and gold zari-woven pleated skirt featuring intricate floral vines and a heavy royal blue temple border.",
+      "fabric": "Silk",
+      "work": "Zari Weaving, Scalloped Collar, Peplum Pleats",
+      "images": [
+        "/images/designs/kids003.png"
+      ]
+    },
+    {
+      "id": "kids-004",
+      "category": "kids-wear",
+     "name": "Lime Green & Fuchsia Pattu Pavadai",
+    "price": "1100",
+    "priceRange": "₹1,100 - ₹1,600",
+    "description": "Vibrant kids' ethnic ensemble featuring a hot pink (fuchsia) sleeveless silk blouse with a silver-beaded round neckline and a pleated peplum waist. The set is paired with a contrasting lime green pleated skirt featuring intricate pink floral brocade work and a wide fuchsia border with traditional gold zari motifs.",
+    "fabric": "Silk",
+    "work": "Zari Weaving, Beadwork, Floral Brocade",
+      "images": [
+        "/images/designs/kids004.png"
       ]
     }
   ]
