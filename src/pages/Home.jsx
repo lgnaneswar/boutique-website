@@ -23,6 +23,7 @@ function Home() {
       <section className="pt-24 md:pt-32 pb-16 md:pb-24 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="animate-fade-in-up">
+          <meta name="google-site-verification" content="9MbvLmmb9s3tqcd4lfWbVNh-l7ESDh7FAGzDINTm0Cw" />
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-black mb-6 text-balance">
               {config.boutiqueName}
             </h1>
